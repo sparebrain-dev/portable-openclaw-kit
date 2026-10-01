@@ -1,0 +1,61 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "${OPENCLAW_HOME}/.openclaw/workspace",
+      "model": {
+        "primary": "deepseek/deepseek-chat",
+        "fallbacks": ["offline-assistant/minimind-64m-offline"]
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "token",
+    "auth": {
+      "token": "把这里改成你自己定的口令"
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "offline-assistant": {
+        "baseUrl": "http://127.0.0.1:18795/v1",
+        "api": "openai-completions",
+        "apiKey": "offline-assistant-local-key",
+        "auth": "api-key",
+        "models": [
+          {
+            "id": "minimind-64m-offline",
+            "name": "MiniMind 离线应急助手",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 131072,
+            "maxTokens": 128,
+            "compat": { "maxTokensField": "max_tokens" }
+          }
+        ],
+        "localService": {
+          "command": "<U盘>:/runtime/node/node.exe",
+          "args": ["server.js"],
+          "cwd": "<U盘>:/offline-assistant",
+          "healthUrl": "http://127.0.0.1:18795/healthz",
+          "readyTimeoutMs": 120000,
+          "idleStopMs": 300000
+        }
+      }
+    }
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "tavily",
+        "apiKey": "到 tavily.com 免费申请后填这里；不想用联网搜索就把整个 tools 段删掉"
+      }
+    }
+  },
+  "wizard": {
+    "completed": true
+  }
+}

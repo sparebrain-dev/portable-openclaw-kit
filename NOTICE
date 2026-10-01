@@ -1,0 +1,14 @@
+portable-openclaw-kit
+Copyright 2026 sparebrain (备脑开发)
+
+This kit is licensed under the MIT License (see LICENSE).
+
+This kit does NOT bundle third-party software:
+
+- OpenClaw (the gateway/application) is distributed separately under the
+  MIT License by the OpenClaw Foundation. Download it from its official
+  repository and place it on your USB drive as described in 组装说明书.md.
+- The offline assistant model is a derivative of MiniMind by Jingyao Gong,
+  licensed under the Apache License, Version 2.0. Weights are hosted at:
+  https://modelscope.cn/models/sparebrain/openclaw-offline-assistant
+  Training data and inference code: github.com/sparebrain/openclaw-offline-assistant

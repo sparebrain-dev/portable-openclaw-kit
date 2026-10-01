@@ -1,0 +1,15 @@
+{
+  "name": "openclaw-offline-assistant",
+  "version": "1.0.0",
+  "description": "MiniMind-based offline emergency assistant for portable OpenClaw USB setups (OpenAI-compatible local inference, no Python required)",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.0",
+    "onnxruntime-node": "1.30.0",
+    "sharp": "0.35.5"
+  }
+}

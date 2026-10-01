@@ -1,0 +1,12 @@
+# 套件自身不跟踪的内容
+node_modules/
+*.onnx
+model/
+data/
+*.tmp
+*.log
+
+# 系统
+Thumbs.db
+.DS_Store
+desktop.ini
