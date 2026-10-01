@@ -32,7 +32,7 @@
 
 ## 相关仓库
 
-- 离线助手（训练数据 / 推理代码 / 评测）：[openclaw-offline-assistant](https://github.com/sparebrain/openclaw-offline-assistant)
+- 离线助手（训练数据 / 推理代码 / 评测）：[openclaw-offline-assistant](https://github.com/sparebrain-dev/openclaw-offline-assistant)
 - 模型权重（ModelScope）：[sparebrain/openclaw-offline-assistant](https://modelscope.cn/models/sparebrain/openclaw-offline-assistant)
 - 基座模型：[MiniMind](https://github.com/jingyaogong/minimind)（Apache 2.0）
 
